@@ -1,12 +1,12 @@
 new Vue({
   el: '#app',
-  data() {
-    return {
-      text: 'hello Vue.js'
+  data(){
+    return{
+      text: 'hello vue.js'
     };
   },
   methods: {
-    handleClick() {
+    handleClick(){
       this.text = 'button pushed';
     }
   }

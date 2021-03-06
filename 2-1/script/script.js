@@ -1,7 +1,7 @@
 const app = new Vue({
   el: '#app',
-  data() {
-    return {
+  data(){
+    return{
       text: 'hello Vue.js'
     };
   }

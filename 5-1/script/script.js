@@ -3,9 +3,9 @@ new Vue({
   data() {
     return {
       items: [
-        { id: 1, label: "子" },
-        { id: 2, label: "丑" },
-        { id: 3, label: "寅" }
+        {id: 1, label: "子" },
+        {id: 2, label: "丑" },
+        {id: 3, label: "寅" }
       ]
     };
   }

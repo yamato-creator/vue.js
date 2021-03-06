@@ -1,16 +1,16 @@
 new Vue({
   el: '#app',
-  data() {
-    return {
+  data(){
+    return{
       count: 59
     };
   },
   methods: {
-    increment() {
-      this.count++;
+    increment(){
+      this.count++
     },
-    decrement() {
-      this.count--;
+    decrement(){
+      this.count--
     }
   }
 });
