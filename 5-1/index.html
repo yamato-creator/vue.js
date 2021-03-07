@@ -10,6 +10,7 @@
       <ul>
         <li
         v-for="(item, i) in items"
+        //v-bind:key="i"の省略形
         :key="i"
         >{{ item.label }}</li>
       </ul>
