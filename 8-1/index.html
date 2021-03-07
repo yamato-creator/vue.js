@@ -16,6 +16,7 @@
           :path="img.path"
           @clickimage="onSelectImage(img.path)"
         ></image-thumbnail>
+        <!-- //アニメーションをつけるところをtransitionタグで囲む -->
         <transition name="fade">
           <modal :is-shown="isShown" :image-path="selectedImage" @close="closeModal" />
         </transition>

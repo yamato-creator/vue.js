@@ -4,21 +4,29 @@
 //親子関係のコンポーネント同士はデータを受け渡す
 //親→子 props
 //子→親 emit
-const imageThumbnail = Vue.component('image-thumbnail', {
+
+
+// 小コンポーネントの宣言
+// コンポーネントの宣言は、Vue.component()と書く
+const imageThumbnail = Vue.component('image-Thumbnail', {
   props: {
     path: {
       type: String,
       default: ''
     }
   },
+  // templateプロパティにはコンポーネントの表示に使用するHTMLを書く
+  // emitの書き方（2つめの引数は）
+  // $emit(イベント名, [親コンポーネントに渡すデータ])
   template: `
-    <div
-      class="img-box"
-      :style="{ backgroundImage: 'url(' + path + ')' }"
-      @click="$emit('clickimage')"
-    ></div>`
+  <div
+   class="img-box"
+   :style="{ backgroundImage: 'url(' + path + ')' }"
+   @click="$emit('clickimage')"
+   ></div>`
 });
 
+// 小コンポーネントの宣言
 const modal = Vue.component('modal', {
   props: {
     isShown: {
@@ -44,6 +52,7 @@ const modal = Vue.component('modal', {
     </div>`
 });
 
+//親コンポーネントへの登録
 const app = new Vue({
   el: '#app',
   components: {
