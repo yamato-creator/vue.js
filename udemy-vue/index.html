@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>sample</title>
+  </head>
+  <body>
+    <div id="app">
+      <p>{{ message }}</p>
+      <p v-if="toggle">
+        <a v-bind:href="url">Vue.js</a>
+      </p>
+      <button v-on:click="clickHandler">Click</button>
+      <ul>
+        <li v-for="language in languages">
+          {{ language }}
+        </li>
+      </ul>
+      <input type="text" v-model="languages[1]">
+      <!-- <hello-component></hello-component>
+      <hello-component></hello-component>
+      <hello-component></hello-component> -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="./script/script.js"></script>
+  </body>
+</html>
