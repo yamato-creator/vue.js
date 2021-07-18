@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="app">
+      <p v-cloak>
+        {{ message }}
+      </p>
+      <!-- <button v-on:click="counter++">
+        Click!
+      </button> -->
+      <!-- <button v-on:click="clickHandler($event, 'Vue.js')">
+        Click!
+      </button> -->
+
+      <!-- イベント修飾子 -->
+      <!-- <button v-on:click.once="clickHandler">
+        Now
+      </button> -->
+
+
+      <!-- キー修飾子 -->
+      <!-- エスケープキーを指定するにはキーコードの27 -->
+      <!-- <input type="text" v-on:keyup.27="clear" v-model="message"> -->
+      <!-- <input type="text" v-on:keyup.esc="clear" v-model="message"> -->
+      <!-- <input type="text" v-on:keyup.esc.space.up="clear" v-model="message"> -->
+
+      <!-- システム修飾子 -->
+      <input type="text" v-on:keyup.ctrl.67="clear" v-model="message">
+
+      <div  v-on:click.shift="clickHandler">
+        click
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
