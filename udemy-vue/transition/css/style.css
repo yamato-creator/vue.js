@@ -1,0 +1,12 @@
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 5s;
+}
+.v-enter,
+.v-leave-to {
+  opacity: 0;
+}
+
+/* トランジションクラス
+追加（表示）enter
+削除（非表示）leave */
