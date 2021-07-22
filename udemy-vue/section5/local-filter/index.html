@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>sample</title>
+  </head>
+  <body>
+    <div id="app">
+      <h2>Mustache</h2>
+      <p>{{ price | numberFormat }}</p>
+      <h2>v-bind</h2>
+      <input type="text" v-bind:value="price | numberFormat">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="./script/script.js"></script>
+  </body>
+</html>

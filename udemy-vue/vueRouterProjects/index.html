@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="app">
+      <router-link to="/top">Go to Top</router-link>
+      <!-- URLパラメータの利用 -->
+      <!-- <router-link to="/users/123">Go to User</router-link> -->
+
+      <!-- 名前付きのルート -->
+      <router-link :to="{ name: 'user', params: {userId: 123} }">Go to User</router-link>
+      <router-view></router-view>
+    </div>
+
+    <script src="https://unpkg.com/vue@2.6.10"></script>
+    <script src="https://unpkg.com/vue-router@3.0.6"></script>
+    <script>
+      const Top = { template: '<div>Top</div>' }
+      const User = { template: '<div>User {{ $route.params.userId }}</div>' }
+
+      // Routerインスタンスの作成
+      const router = new VueRouter({
+        routes: [
+          {
+            path: '/top',
+            component: Top
+          },
+          {
+            path: '/users/:userId',
+            name: 'user',
+            component: User
+          }
+        ]
+      })
+
+      // RouterのインスタンスをRootとなるVueインスタンスに渡してマウントする
+      const app = new Vue({
+        router: router
+      }).$mount('#app')
+    </script>
+  </body>
+</html>
