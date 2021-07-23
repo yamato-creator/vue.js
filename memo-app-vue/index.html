@@ -9,7 +9,10 @@
   <body>
     <div id="app">
       <h2>TODO List</h2>
-      <!-- 画面遷移を防ぐため -->
+      <!--
+      画面遷移を防ぐためにprevent
+      form内のinput要素でEnterキーを押してもイベントが発火
+      -->
       <form v-on:submit.prevent>
         <input type="text" v-model="newItem">
         <button v-on:click="addItem">
